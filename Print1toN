@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Recursion {
+    // Big Problem
+    static void print1ton(int num,int n){
+        //Brake the function with "return" to exit a function
+        if(num>n){
+            return;
+        }
+        System.out.println(num);
+        //small problem + put it in cycle
+        print1ton(num+1,n);
+    }
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int n = scan.nextInt();
+        print1ton(1 ,n);
+
+    }
+    
+}
