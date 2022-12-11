@@ -1,0 +1,21 @@
+import java.util.ArrayList;
+public class NoofDigit {
+    //static int []search(int arr[],int index,int len){
+        static ArrayList<Integer> list = new ArrayList<Integer>();
+    static void search(int arr[] , int index , int len){
+        if(index == len){
+            return ;
+        }
+        if(arr[index] ==2){
+            list.add(index);
+        }
+        search(arr, index+1, len);
+        
+    }
+    public static void main(String[] args) {
+        int arr[] = {2,4,5,6,2,5,3,2};
+        search(arr, 0, arr.length);
+        System.out.println(list);
+    }
+   
+}
