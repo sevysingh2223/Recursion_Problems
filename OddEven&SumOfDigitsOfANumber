@@ -1,0 +1,21 @@
+public class EvenOdd {
+    static int [] computeEvenOdd(int number,int count){
+        if(number == 0){
+            return new int[2];
+        }
+        int []arr = computeEvenOdd(number/10,count+1);
+        if(count %2 != 0){
+            arr[0]=arr[0]+number%10;
+        }
+        else{
+            arr[1]=arr[1]+number%10;
+        }
+        return arr;
+    }
+    public static void main(String[] args) {
+        //int number = 12345;
+        int arr[]=computeEvenOdd(723164,0);
+        System.out.println("Odd Sum :" + arr[0]);
+        System.out.println("Even Sum :" + arr[1]);
+    }
+}
