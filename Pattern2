@@ -1,0 +1,39 @@
+public class PatternTwo{
+    static void space(int numberofspace){
+        if(numberofspace==0){
+            return;
+        }
+        System.out.print(" ");
+        space(numberofspace-1);
+    }
+    static void star(int numberofstars){
+        if(numberofstars==0){
+            return;
+        }
+        System.out.print("*");
+        
+        star(numberofstars-1);
+    }
+    static void line(int numberoflines){
+    // OR static void line(int numberoflines, totalnumberoflines)
+        if(numberoflines==0){
+            return;
+        }
+        line(numberoflines-1);
+        space(5-numberoflines);
+        // OR space(totalnumberoflines - numberoflines);
+        star(numberoflines);
+        System.out.println();
+        // numberoflines--; because decrement is detailed downward
+    }
+    static void pattern(int numberoflines){
+        // Line Print(5) 
+        //Star Print (*)
+        line(numberoflines);
+        //OR   line(numberoflines,numberoflines);
+    }
+    public static void main(String[] args) {
+        pattern(5);
+    }
+    
+}
