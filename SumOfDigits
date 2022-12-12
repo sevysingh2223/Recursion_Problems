@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class SumOfDigitsRec {
+    static int Sumofdigit(int n){
+        if(n==0){
+            return sum;
+        }
+        int a = n%10;
+        sum = sum+a;
+        return Sumofdigit(n/10);
+    }
+    static int sum = 0;
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter Number");
+        int number = scan.nextInt();
+        int res = Sumofdigit(number);
+        System.out.println(res);
+    }
+    }
+
