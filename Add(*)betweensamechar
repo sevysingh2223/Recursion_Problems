@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class AdjacentStars {
+    static String output = "";
+    static void addStars(String sent, int i){
+        output = output + sent.charAt(i);
+       if(i==sent.length()-1){
+        return ;
+       }
+       if(sent.charAt(i) == sent.charAt(i+1)){
+        output = output + "*";
+    }
+
+    addStars(sent, i+1);
+    }
+
+
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        String str = scan.nextLine();
+        addStars(str, 0);
+        System.out.println(output);
+    }
+}   
+
